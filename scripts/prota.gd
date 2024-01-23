@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 150  # Velocidad de movimiento
+@export var speed = 100  # Velocidad de movimiento
 
 @onready var player = $Sprite2D
 
