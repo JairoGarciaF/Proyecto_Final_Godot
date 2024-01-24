@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpyiva02tfew2"]
 
-[ext_resource type="Texture2D" uid="uid://bmjf6jgnsi53j" path="res://assets/characters/main/prota.png" id="1_ljooi"]
+[ext_resource type="Texture2D" uid="uid://dbn0qgn0ejf6a" path="res://assets/characters/main/prota.png" id="1_ljooi"]
 [ext_resource type="Script" path="res://scripts/prota.gd" id="1_x67fq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wufq6"]

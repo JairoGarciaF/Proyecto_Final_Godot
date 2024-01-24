@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch7gqrrybw85s"]
+
+[ext_resource type="Texture2D" uid="uid://f60hm5deil3j" path="res://assets/characters/npcs/anciano.png" id="1_8noy1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3f81"]
+size = Vector2(16, 15)
+
+[node name="npc_anciano" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_x3f81")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_8noy1")

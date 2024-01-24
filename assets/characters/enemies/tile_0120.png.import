@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbn0qgn0ejf6a"
-path="res://.godot/imported/prota.png-ea0477ab5a41c73a3d5cde31d034d0b0.ctex"
+uid="uid://cq41hfc1ufyq4"
+path="res://.godot/imported/tile_0120.png-0983ee7a90399e2ff23aa0f31b95fedc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/main/prota.png"
-dest_files=["res://.godot/imported/prota.png-ea0477ab5a41c73a3d5cde31d034d0b0.ctex"]
+source_file="res://assets/characters/enemies/tile_0120.png"
+dest_files=["res://.godot/imported/tile_0120.png-0983ee7a90399e2ff23aa0f31b95fedc.ctex"]
 
 [params]
 
