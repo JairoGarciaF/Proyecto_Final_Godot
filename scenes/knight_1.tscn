@@ -1,0 +1,142 @@
+[gd_scene load_steps=21 format=3 uid="uid://cjb2iotha1qc2"]
+
+[ext_resource type="Texture2D" uid="uid://cjawplul802n6" path="res://assets/characters/knights/Attack 3.png" id="1_ui86j"]
+[ext_resource type="Texture2D" uid="uid://bp144ntcdu55e" path="res://assets/characters/knights/Idle.png" id="1_wmq0g"]
+[ext_resource type="Texture2D" uid="uid://bbgl1qb4stuxm" path="res://assets/characters/knights/Walk.png" id="3_t1wbw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5eys"]
+size = Vector2(43, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ym4p"]
+atlas = ExtResource("1_ui86j")
+region = Rect2(0, 0, 102, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhdii"]
+atlas = ExtResource("1_ui86j")
+region = Rect2(102, 0, 102, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivp0w"]
+atlas = ExtResource("1_ui86j")
+region = Rect2(204, 0, 102, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyonv"]
+atlas = ExtResource("1_wmq0g")
+region = Rect2(11, 0, 67, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t15kg"]
+atlas = ExtResource("1_wmq0g")
+region = Rect2(78, 0, 67, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvspg"]
+atlas = ExtResource("1_wmq0g")
+region = Rect2(145, 0, 67, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3hky"]
+atlas = ExtResource("1_wmq0g")
+region = Rect2(212, 0, 67, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7d7u"]
+atlas = ExtResource("3_t1wbw")
+region = Rect2(28, 0, 64, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i8te"]
+atlas = ExtResource("3_t1wbw")
+region = Rect2(96, 0, 64, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg0xr"]
+atlas = ExtResource("3_t1wbw")
+region = Rect2(164, 0, 64, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie6ej"]
+atlas = ExtResource("3_t1wbw")
+region = Rect2(232, 0, 64, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clbq6"]
+atlas = ExtResource("3_t1wbw")
+region = Rect2(300, 0, 64, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wshnt"]
+atlas = ExtResource("3_t1wbw")
+region = Rect2(368, 0, 64, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksep5"]
+atlas = ExtResource("3_t1wbw")
+region = Rect2(436, 0, 64, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7yky"]
+atlas = ExtResource("3_t1wbw")
+region = Rect2(504, 0, 64, 86)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7grgl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ym4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhdii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivp0w")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyonv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t15kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvspg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3hky")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7d7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2i8te")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg0xr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie6ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clbq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wshnt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksep5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7yky")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[node name="Knight_1" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 11)
+shape = SubResource("RectangleShape2D_w5eys")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7grgl")
+animation = &"attack"
+autoplay = "idle"

@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 @onready var player = $Sprite2D
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction_x = Input.get_axis("move_left", "move_right")
 	var direction_y = Input.get_axis("move_up", "move_down")
 
