@@ -15,6 +15,7 @@ func _ready():
 
 func _physics_process(_delta):
 	deal_with_damage()  # Lógica para tratar el daño.
+	update_health()
 
 	if player_chase:
 		position += (player.position - position)/speed  # Mueve al enemigo hacia la posición del jugador.
@@ -57,3 +58,15 @@ func deal_with_damage():
 
 func _on_take_damage_cooldown_timeout():
 	can_take_damage = true  # Activa la capacidad de recibir daño después de que el temporizador de recuperación ha terminado.
+
+func update_health():
+	var healthBar = $healthBar
+	
+	healthBar.value = health
+	
+	if health >= 100:
+		healthBar.visible = false
+	else:
+		healthBar.visible = true
+	
+	

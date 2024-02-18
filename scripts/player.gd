@@ -4,7 +4,7 @@ class_name Player
 
 var enemy_in_attack_range = false
 var enemy_attack_cooldown = true
-var health = 200
+var health = 150
 var player_alive = true
 
 var attack_in_progress = false

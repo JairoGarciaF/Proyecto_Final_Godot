@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://clbel8nd38nfc"]
 
-[ext_resource type="Texture2D" uid="uid://cxpr7rxuean8k" path="res://assets/characters/enemies/Attack_1.png" id="1_sajtm"]
+[ext_resource type="Texture2D" uid="uid://dy2cjihnfxmdq" path="res://assets/characters/enemies/Attack_1.png" id="1_sajtm"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_ylr7a"]
 [ext_resource type="Texture2D" uid="uid://2f0ycgnw66ji" path="res://assets/characters/enemies/Idle.png" id="2_8wh4q"]
 [ext_resource type="Texture2D" uid="uid://ckyddrh1pea0w" path="res://assets/characters/enemies/Walk.png" id="3_01pjn"]
@@ -188,7 +188,6 @@ collision_layer = 16
 shape = SubResource("CircleShape2D_fxivt")
 
 [node name="detection_area" type="Area2D" parent="."]
-visible = false
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
@@ -199,7 +198,6 @@ position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_yixqu")
 
 [node name="hit_zone" type="Area2D" parent="."]
-visible = false
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hit_zone"]
@@ -208,6 +206,16 @@ shape = SubResource("CircleShape2D_qamiq")
 
 [node name="take_damage_cooldown" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="healthBar" type="ProgressBar" parent="."]
+modulate = Color(0, 0.6, 0, 1)
+offset_left = -15.0
+offset_top = 34.0
+offset_right = 75.0
+offset_bottom = 61.0
+scale = Vector2(0.3, 0.3)
+value = 100.0
+show_percentage = false
 
 [connection signal="body_entered" from="AnimatedSprite2D/detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="AnimatedSprite2D/detection_area" to="." method="_on_detection_area_body_exited"]
