@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://bcbufrx3ej6eh"]
+[gd_scene load_steps=58 format=3 uid="uid://bcbufrx3ej6eh"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_bmps1"]
 [ext_resource type="Texture2D" uid="uid://bdyc80ar76m7y" path="res://assets/characters/player/player.png" id="2_mh8le"]
@@ -419,8 +419,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wpov"]
 radius = 13.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_r07gc"]
+radius = 13.0
+
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 14
+collision_mask = 30
 script = ExtResource("1_bmps1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -440,6 +443,7 @@ position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_2wpov")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="attack_cooldown" type="Timer" parent="."]
 wait_time = 0.5
@@ -447,7 +451,16 @@ wait_time = 0.5
 [node name="deal_attack_timer" type="Timer" parent="."]
 wait_time = 0.5
 
+[node name="dialog_zone" type="Area2D" parent="."]
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialog_zone"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_r07gc")
+
 [connection signal="body_entered" from="hit_zone" to="." method="_on_hit_zone_body_entered"]
 [connection signal="body_exited" from="hit_zone" to="." method="_on_hit_zone_body_exited"]
 [connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="timeout" from="deal_attack_timer" to="." method="_on_deal_attack_timer_timeout"]
+[connection signal="body_entered" from="dialog_zone" to="." method="_on_dialog_zone_body_entered"]
+[connection signal="body_exited" from="dialog_zone" to="." method="_on_dialog_zone_body_exited"]

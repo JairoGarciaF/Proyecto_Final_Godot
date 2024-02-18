@@ -8,6 +8,7 @@ size = Vector2(16, 15)
 [node name="npc_caballero" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 texture = ExtResource("1_wd87r")

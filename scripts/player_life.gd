@@ -7,5 +7,5 @@ extends CanvasLayer
 @onready var player : Node = get_node(player_node)
 
 
-func _process(delta):
+func _process(_delta):
 	$TextureProgressBar.value = player.health

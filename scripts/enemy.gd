@@ -13,7 +13,7 @@ var can_take_damage = true  # Indica si el enemigo puede recibir daño.
 func _ready():
 	enemySprite.play("idle")  # Inicia la animación "idle" cuando el enemigo está listo.
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	deal_with_damage()  # Lógica para tratar el daño.
 
 	if player_chase:
@@ -30,7 +30,7 @@ func _on_detection_area_body_entered(body):
 	player = body
 	player_chase = true  # Activa la persecución cuando el jugador entra en el área de detección.
 
-func _on_detection_area_body_exited(body):
+func _on_detection_area_body_exited(_body):
 	player = null
 	player_chase = false  # Desactiva la persecución cuando el jugador sale del área de detección.
 

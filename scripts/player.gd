@@ -1,11 +1,20 @@
 extends CharacterBody2D
 
+class_name Player
+
 var enemy_in_attack_range = false
 var enemy_attack_cooldown = true
 var health = 200
 var player_alive = true
 
 var attack_in_progress = false
+
+var current_sign : Sign = null
+var current_sign2 : Sign2 = null
+
+var not_in_dialog = true
+
+var sign_in_range = false
 
 const speed = 200
 var current_dir = "none"
@@ -14,16 +23,27 @@ var current_dir = "none"
 func _ready():
 	playerSprite.play("idle") # Inicia la animación "idle" cuando el jugador está listo.
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	player_movement() # Llama a la función para manejar el movimiento del jugador.
 	enemy_attack() # Llama a la función para manejar el ataque del enemigo.
 #	attack()
+
+	if sign_in_range:
+		show_dialog()
 	
 	if health <= 0:
 		player_alive = false
 		health = 0
 		print("player has been killed")
 		self.queue_free() # Destruye el objeto si la salud del jugador es menor a 0.
+
+func show_dialog():
+	if Input.is_action_just_pressed("ui_accept"):
+		if current_sign:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main")
+		if current_sign2:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main2")
+	return
 
 func player_movement():
 	# Maneja el movimiento del jugador según las teclas presionadas.
@@ -48,7 +68,7 @@ func player_movement():
 		play_animation(1)
 		velocity.x = 0
 		velocity.y = -speed
-	
+		
 	# Si se presiona la tecla de ataque, llama a la función attack().
 	elif Input.is_action_just_pressed("attack"):
 		attack()
@@ -57,7 +77,6 @@ func player_movement():
 		play_animation(0)
 		velocity.x = 0
 		velocity.y = 0
-		
 	move_and_slide() # Utiliza la función de Godot para mover y deslizar el cuerpo.
 
 func play_animation(movement):
@@ -105,7 +124,6 @@ func _on_hit_zone_body_entered(body):
 	if body.has_method("enemy"):
 		enemy_in_attack_range = true # Activa la indicación de que un enemigo está en el rango de ataque.
 
-
 func _on_hit_zone_body_exited(body):
 	if body.has_method("enemy"):
 		enemy_in_attack_range = false # Desactiva la indicación de que un enemigo está en el rango de ataque.
@@ -147,3 +165,16 @@ func _on_deal_attack_timer_timeout():
 	$deal_attack_timer.stop() # Detiene el temporizador de ataque.
 	global.player_current_attack = false # Desactiva la indicación de que el jugador está atacando.
 	attack_in_progress = false # Desactiva la indicación de que el ataque está en progreso.
+
+func _on_dialog_zone_body_entered(body):
+	if body is Sign:
+		current_sign = body
+		sign_in_range = true
+	elif body is Sign2:
+		current_sign2 = body
+		sign_in_range = true
+
+func _on_dialog_zone_body_exited(body):
+	if body is Sign or body is Sign2:
+		current_sign = null
+		sign_in_range = false

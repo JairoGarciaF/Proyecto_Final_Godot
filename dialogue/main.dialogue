@@ -1,0 +1,22 @@
+~ main
+
+Princess: [[Hola|¿Qué tal?]]... ¿Cómo estás?
+- ¿Quién eres?
+Princess: Soy la princesa y necesito tu ayuda.
+- ¿Cómo llegaste ahí?
+Princess: Me tienen atrapada en un castillo con varios mounestros y no puedo escapar
+- ¿Dónde está el castillo?
+Princess: El castillo está en lo profundo del Bosque Encantado, al norte de aquí.
+- Ya voy por tí, no te preocupes!!
+Princess: ¡Gracias por ofrecerte a ayudarme! Estoy atrapada en un castillo con monstruos, y necesito ser rescatada.
+- Adiós.
+
+=> END
+
+~ main2 
+=> END
+
+~ main3
+
+
+=> END
