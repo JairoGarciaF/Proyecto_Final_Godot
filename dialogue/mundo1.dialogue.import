@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dy73bhmfuyk0a"
+path="res://.godot/imported/mundo1.dialogue-db803e47fa12ed6c2b3796bb4ca00bfb.tres"
+
+[deps]
+
+source_file="res://dialogue/mundo1.dialogue"
+dest_files=["res://.godot/imported/mundo1.dialogue-db803e47fa12ed6c2b3796bb4ca00bfb.tres"]
+
+[params]
+
+defaults=true

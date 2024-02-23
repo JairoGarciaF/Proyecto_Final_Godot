@@ -11,6 +11,28 @@ var attack_in_progress = false
 
 var current_sign : Sign = null
 var current_sign2 : Sign2 = null
+var current_sign3 : Sign3 = null
+var current_sign4 : Sign4 = null
+var current_sign5 : Sign5 = null
+var current_sign6 : Sign6 = null
+var current_sign7 : Sign7 = null
+var current_sign8 : Sign8 = null
+var current_sign9 : Sign9 = null
+var current_sign10 : Sign10 = null
+var current_sign11 : Sign11 = null
+var current_sign12 : Sign12 = null
+var current_sign13 : Sign13 = null
+var current_sign14 : Sign14 = null
+var current_sign15 : Sign15 = null
+
+
+var current_sign16 : Sign16 = null
+var current_sign17 : Sign17 = null
+var current_sign18 : Sign18 = null
+var current_sign19 : Sign19 = null
+var current_sign20 : Sign20 = null
+
+var current_si
 
 var not_in_dialog = true
 
@@ -43,6 +65,43 @@ func show_dialog():
 			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main")
 		if current_sign2:
 			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main2")
+		if current_sign3:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main3")
+		if current_sign4:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main4")
+		if current_sign5:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main5")
+		if current_sign6:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main6")
+		if current_sign7:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main7")
+		if current_sign8:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main8")
+		if current_sign9:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main9")
+		if current_sign10:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main10")
+		if current_sign11:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main11")
+		if current_sign12:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main12")
+		if current_sign13:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main13")
+		if current_sign14:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main14")
+		if current_sign15:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/main.dialogue"), "main15")
+		
+		if current_sign16:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/mundo1.dialogue"), "main")
+		if current_sign17:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/mundo1.dialogue"), "main2")
+		if current_sign18:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/mundo1.dialogue"), "main3")
+		if current_sign19:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/mundo1.dialogue"), "main4")
+		if current_sign20:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/mundo1.dialogue"), "main5")
 	return
 
 func player_movement():
@@ -166,6 +225,7 @@ func _on_deal_attack_timer_timeout():
 	global.player_current_attack = false # Desactiva la indicación de que el jugador está atacando.
 	attack_in_progress = false # Desactiva la indicación de que el ataque está en progreso.
 
+
 func _on_dialog_zone_body_entered(body):
 	if body is Sign:
 		current_sign = body
@@ -173,6 +233,61 @@ func _on_dialog_zone_body_entered(body):
 	elif body is Sign2:
 		current_sign2 = body
 		sign_in_range = true
+	elif body is Sign3:
+		current_sign3 = body
+		sign_in_range = true
+	elif body is Sign4:
+		current_sign4 = body
+		sign_in_range = true
+	elif body is Sign5:
+		current_sign5 = body
+		sign_in_range = true
+	elif body is Sign6:
+		current_sign6 = body
+		sign_in_range = true
+	elif body is Sign7:
+		current_sign7 = body
+		sign_in_range = true
+	elif body is Sign8:
+		current_sign8 = body
+		sign_in_range = true
+	elif body is Sign9:
+		current_sign9 = body
+		sign_in_range = true
+	elif body is Sign10:
+		current_sign10 = body
+		sign_in_range = true
+	elif body is Sign11:
+		current_sign11 = body
+		sign_in_range = true
+	elif body is Sign12:
+		current_sign12 = body
+		sign_in_range = true
+	elif body is Sign13:
+		current_sign13 = body
+		sign_in_range = true
+	elif body is Sign14:
+		current_sign14 = body
+		sign_in_range = true
+	elif body is Sign15:
+		current_sign15 = body
+		sign_in_range = true
+	elif body is Sign16:
+		current_sign16 = body
+		sign_in_range = true
+	elif body is Sign17:
+		current_sign17 = body
+		sign_in_range = true
+	elif body is Sign18:
+		current_sign18 = body
+		sign_in_range = true
+	elif body is Sign19:
+		current_sign19 = body
+		sign_in_range = true
+	elif body is Sign20:
+		current_sign20 = body
+		sign_in_range = true
+
 
 func _on_dialog_zone_body_exited(body):
 	if body is Sign or body is Sign2:
