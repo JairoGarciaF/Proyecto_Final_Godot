@@ -8,4 +8,5 @@ extends CanvasLayer
 
 
 func _process(_delta):
+
 	$TextureProgressBar.value = player.health

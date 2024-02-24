@@ -1,24 +1,296 @@
 ~ main
 
-Princess: [[Hola|¿Qué tal?]]... ¿Cómo estás?
-- ¿Quién eres?
-Princess: Soy la princesa y necesito tu ayuda.
-- ¿Cómo llegaste ahí?
-Princess: Me tienen atrapada en un castillo con varios mounestros y no puedo escapar
-- ¿Dónde está el castillo?
-Princess: El castillo está en lo profundo del Bosque Encantado, al norte de aquí.
-- Ya voy por tí, no te preocupes!!
-Princess: ¡Gracias por ofrecerte a ayudarme! Estoy atrapada en un castillo con monstruos, y necesito ser rescatada.
-- Adiós.
+Princess: [[Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿En qué ciudad murió Eloy Alfaro?
+	- Quito
+		Princess: Respuesta correcta.
+		Princess: Esta pregunta fue para calentar. 
+		Princess: Te recomiendo que respondas las preguntas de los carteles para saber qué camino tomar.
+		=> END
+	- Guayaquil 
+		Princess: Respuesta incorrecta.
+		=> END
+	- Esmeraldas
+		Princess: Respuesta incorrecta.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
 
 => END
 
 ~ main2
 
+Princess: [[Vas por buen camino|Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿Quién fue el primer presidente del Ecuador en crear el primer instituto ecuatoriano para señoritas? 
+	- Juan José Flores  
+		Princess: Respuesta incorrecta.
+		=> END
+	- Vicente Rocafuerte 
+		Princess: Respuesta correcta.
+		Princess: Te recomiendo que sigas el camino de abajo.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+	- García Moreno
+		Princess: Respuesta incorrecta.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
 
 => END
 
-~ main3
+~ main4
 
+Princess: [[Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿Cuáles son las ciudades importantes de nuestro Ecuador?
+	- Quito, Loja, Cuenca 
+		Princess: Respuesta incorrecta.
+		=> END
+	- Esmeraldas, Guayaquil, Montecristi
+		Princess: Respuesta incorrecta.
+		=> END
+	- Quito, Cuenca, Guayaquil
+		Princess: Respuesta correcta.
+		Princess: Te desviaste del camino, regresa por donde viniste.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+=> END
+
+~ main5
+
+Princess: [[Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿Cuál fue la primera ciudad fundada en el Ecuador?
+	- San Francisco de Quito 
+		Princess: Respuesta incorrecta.
+		=> END
+	- San Pedro de Riobamba
+		Princess: Respuesta correcta.
+		Princess: Te desviaste del camino, regresa por donde viniste.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+	- San Gregorio de Puerto Viejo
+		Princess: Respuesta incorrecta.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+=> END
+
+~ main6
+
+Princess: [[Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿Qué provincias ocupó la cultura Valdivia?
+	- Pichincha, Azogues, Napo 
+		Princess: Respuesta incorrecta.
+		=> END
+	- Loja, Ibarra, Cotopaxi
+		Princess: Respuesta incorrecta.
+		=> END
+	- Manabí, Esmeraldas, Santa Elena
+		Princess: Respuesta correcta.
+		Princess: Te desviaste del camino, regresa por donde viniste.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+=> END
+
+~ main7
+
+Princess: [[Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿Quién fundó San Gregorio de Puerto Viejo?
+	- Francisco Pacheco 
+		Princess: Respuesta incorrecta.
+		=> END
+	- Diego de Almagro
+		Princess: Respuesta correcta.
+		Princess: Te recomiendo que sigas por la derecha.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+=> END
+
+~ main8
+Princess: [[Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿En qué fecha se dió el primer grito de independencia?
+	- 10 de agosto de 1815 
+		Princess: Respuesta incorrecta.
+		=> END
+	- 10 de agosto de 1809
+		Princess: Respuesta correcta.
+		Princess: Te recomiendo que sigas por abajo a la derecha.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+	- 10 de agosto de 1800 
+		Princess: Respuesta incorrecta.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+=> END
+
+~ main9
+Princess: [[Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿Quién descubrió el Rio Amazonas?
+	- Francisco de Orellana  
+		Princess: Respuesta correcta.
+		Princess: Te recomiendo que sigas por abajo a la derecha.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+	- Sebastián de Benalcázar
+		Princess: Respuesta incorrecta.
+		=> END
+	- Francisco Pizarro 
+		Princess: Respuesta incorrecta.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+=> END
+
+~ main10
+
+Princess: [[Vas por buen camino|Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿Quién ha sido presidente del Ecuador? 
+	- Velasco Ibarra  
+		Princess: Respuesta correcta.
+		Princess: Te recomiendo que sigas recto por la derecha.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+	- Dalo Bucarán
+		Princess: Respuesta incorrecta.
+		=> END
+	- Gilmar Gutiérrez
+		Princess: Respuesta incorrecta.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+
+=> END
+
+~ main11
+
+Princess: [[Vas por buen camino|Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿Quién fundó la ciudad de Tomebamba? 
+	- Francisco de Orellana 
+		Princess: Respuesta correcta.
+		Princess: Te recomiendo que sigas recto por la derecha.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+	- Sebastián de Benalcázar
+		Princess: Respuesta incorrecta.
+		=> END
+	- Francisco Pizarro
+		Princess: Respuesta incorrecta.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+
+=> END
+
+~ main12
+
+Princess: [[Vas por buen camino|Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: Los colores de la bandera del ecuador son:
+	- Blanco, azul, amarillo  
+		Princess: Respuesta incorrecta.
+		=> END
+	- Café, rojo, verde
+		Princess: Respuesta incorrecta.
+		=> END
+	- Amarillo, azul, rojo
+		Princess: Respuesta correcta.
+		Princess: Te recomiendo que sigas por abajo.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+
+=> END
+
+~ main13
+
+Princess: [[Vas por buen camino|Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿Quién fue nombrado presidente Interino de la Republica en el año de 1997?
+	- Fabián Alarcón  
+		Princess: Respuesta correcta.
+		Princess: Te recomiendo que sigas por abajo y a la derecha.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+	- Abdalá Bucarán
+		Princess: Respuesta incorrecta.
+		=> END
+	- Jamil Mahuad
+		Princess: Respuesta incorrecta.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+
+=> END
+
+~ main14
+
+Princess: [[Vas por buen camino|Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: La primera universidad que se formó en la Colonia fue la Universidad de:
+	- San Gregorio  
+		Princess: Respuesta correcta.
+		Princess: Te recomiendo que sigas por arriba.
+		Princess: [[Apresúrate viajero|Date prisa]], sálvame.
+		=> END
+	- Universidad Central
+		Princess: Respuesta incorrecta.
+		=> END
+	- San Fulgencio
+		Princess: Respuesta incorrecta.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
+
+=> END
+
+~ main15
+
+Princess: [[Vas por buen camino|Que gusto tenerte de vuelta|Regresaste]]. Estás listo para probar tus conocimientos?
+- Si
+	Princess: ¿Qué iglesia no forma parte de la calle de las siete cruces?
+	- Iglesia de la Compañía  
+		Princess: Respuesta incorrecta.
+		=> END
+	- Iglesia de San Francisco
+		Princess: Respuesta correcta.
+		Princess: Te recomiendo que sigas por arriba.
+		Princess: Ya casi llegas viajero, sálvame!
+		=> END
+	- Convento del Carmen Alto
+		Princess: Respuesta incorrecta.
+		=> END
+- No
+	Princess: [[Que te vaya bien|Nos vemos]].
+	=> END
 
 => END

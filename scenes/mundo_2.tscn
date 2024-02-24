@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bj1ubbyer04ri"]
+[gd_scene load_steps=20 format=3 uid="uid://bj1ubbyer04ri"]
 
 [ext_resource type="PackedScene" uid="uid://uq8hj3ltd7fb" path="res://scenes/pueblo_2.tscn" id="1_psr43"]
 [ext_resource type="PackedScene" uid="uid://bcbufrx3ej6eh" path="res://scenes/player.tscn" id="2_bry0x"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c45i56uq4uoed" path="res://scenes/player_life.tscn" id="5_oulkj"]
 [ext_resource type="PackedScene" uid="uid://cmxiu68k1y5nj" path="res://scenes/Signs/sign.tscn" id="6_q4xhc"]
 [ext_resource type="PackedScene" uid="uid://dikuf0u0vxtm0" path="res://scenes/Signs/sign_2.tscn" id="7_2pi1w"]
-[ext_resource type="PackedScene" uid="uid://bt1ljpt3d8mpr" path="res://scenes/Signs/sign_3.tscn" id="8_u1nxy"]
 [ext_resource type="PackedScene" uid="uid://bwaa6f4ox5e7w" path="res://scenes/Signs/sign_4.tscn" id="9_2hmyi"]
 [ext_resource type="PackedScene" uid="uid://dnhn6mm3tqyx8" path="res://scenes/Signs/sign_5.tscn" id="10_4j21f"]
 [ext_resource type="PackedScene" uid="uid://ccnh5f8gesmwq" path="res://scenes/Signs/sign_6.tscn" id="11_n05u3"]
@@ -37,7 +36,7 @@ player_node = NodePath("../Player")
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Enemy" parent="Enemies" instance=ExtResource("4_d8xuo")]
-position = Vector2(-892, 1880)
+position = Vector2(-1019, 1861)
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource("4_d8xuo")]
 position = Vector2(-317, 1540)
@@ -87,10 +86,7 @@ position = Vector2(202, 1859)
 position = Vector2(-1761, 2595)
 
 [node name="Sign2" parent="Signs" instance=ExtResource("7_2pi1w")]
-position = Vector2(-908, 1840)
-
-[node name="Sign3" parent="Signs" instance=ExtResource("8_u1nxy")]
-position = Vector2(-619, 1968)
+position = Vector2(-908, 1899)
 
 [node name="Sign4" parent="Signs" instance=ExtResource("9_2hmyi")]
 position = Vector2(-999, 1318)
@@ -111,7 +107,7 @@ position = Vector2(624, 320)
 position = Vector2(423, 870)
 
 [node name="Sign10" parent="Signs" instance=ExtResource("15_8wyeg")]
-position = Vector2(909, 1307)
+position = Vector2(962, 1414)
 
 [node name="Sign11" parent="Signs" instance=ExtResource("16_8vhne")]
 position = Vector2(1999, 696)
@@ -120,10 +116,10 @@ position = Vector2(1999, 696)
 position = Vector2(1932, 1441)
 
 [node name="Sign13" parent="Signs" instance=ExtResource("18_gi1xl")]
-position = Vector2(2003, 2078)
+position = Vector2(1963, 2061)
 
 [node name="Sign14" parent="Signs" instance=ExtResource("19_7jjlv")]
-position = Vector2(4392, 2689)
+position = Vector2(4392, 2598)
 
 [node name="Sign15" parent="Signs" instance=ExtResource("20_rdu8n")]
 position = Vector2(3397, 1235)
