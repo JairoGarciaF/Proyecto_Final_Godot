@@ -13,3 +13,156 @@ Princesa: ¡Gracias por ofrecerte a ayudarme! Recuerda, el tiempo es crucial. Es
 
 => END
 
+~ main2
+
+Princesa: [[¡Bienvenido de vuelta!|Bienvenido]]. Te encuentras en una bifurcación. ¿Estás listo para responder una pregunta?
+- Si
+	Princesa: Perfecto. Aquí está tu pregunta: ¿Cuál es la montaña más alta de Ecuador?
+	- Cotopaxi 
+		Princesa: Respuesta incorrecta.
+		=> END
+	- Pichincha
+		Princesa: Respuesta incorrecta.
+		=> END
+	- Chimborazo
+		Princesa: Respuesta correcta. Muy bien.
+		Princesa: El camino correcto es hacia la derecha. ¡Buena suerte!
+		=> END
+- No
+	Princesa: [[[Hasta la próxima misión|Adiós por ahora]].
+	=> END
+=> END
+
+
+~ main3
+
+Princesa: [[¡Qué gusto verte!|Hola de nuevo]]. Vas muy bien, veo que te encuentraste con dos caminos. 
+¿Estás listo para responder una pregunta?
+- Si
+	Princesa: Perfecto. Aquí está tu pregunta: ¿Cuál es el río más largo de Ecuador?
+	- Guayas
+		Princesa: Respuesta incorrecta.
+		Princesa: Necesitarás responder correctamente y tomar el camino correcto para avanzar en tu misión.
+		=> END
+	- Amazonas
+		Princesa: Respuesta correcta. Muy bien.
+		Princesa: El camino correcto es hacia la izquierda. ¡Buena suerte!
+		=> END
+	- Napo
+		Princesa: Respuesta incorrecta.
+		Princesa: Necesitarás responder correctamente y tomar el camino correcto para avanzar en tu misión.
+		=> END
+- No
+	Princesa:  [[Que los vientos te guíen|Nos vemos luego]].
+	=> END
+=> END
+
+~ main4
+
+Princesa: [[¡Hola, valiente!|Hola]]. Veo que te encuentras estancado sin saber a donde ir. ¿Estás listo para responder otra pregunta?
+- Si
+	Princesa: Perfecto. Aquí está tu pregunta: ¿Cuál es el archipiélago de Ecuador que se encuentra en el Océano Pacífico?
+	- Islas Galápagos
+		Princesa: Respuesta correcta. ¡Muy bien!
+		Princesa: El camino correcto es seguir hacia abajo. ¡Buena suerte!
+		=> END
+	- Islas Canarias
+		Princesa: Respuesta incorrecta.
+		Princesa: Necesitarás responder correctamente para tomar el camino correcto para avanzar en tu misión.
+		=> END
+	- Islas Malvinas
+		Princesa: Respuesta incorrecta.
+		Princesa: Necesitarás responder correctamente para tomar el camino correcto para avanzar en tu misión.
+		=> END
+- No
+	Princesa: [[Espero verte de nuevo pronto|Nos despedimos]].
+	=> END
+=> END
+
+~ main5
+
+Princesa: [[¡Hola aventurero!|Hola]]. Te encuentras en una nueva bifurcación. ¿Estás listo para responder otra pregunta?
+- Si
+	Princesa: Perfecto. Aquí está tu pregunta: ¿Cuál es la capital de la provincia de Manabí en Ecuador?
+	- Manta
+		Princesa: Respuesta incorrecta.
+		Princesa: Necesitarás responder correctamente para tomar el camino correcto para avanzar en tu misión.
+		=> END
+	- Portoviejo
+		Princesa: Respuesta correcta. ¡Muy bien!
+		Princesa: El camino correcto es hacia la derecha. ¡Buena suerte!
+		=> END
+	- Guayaquil
+		Princesa: Respuesta incorrecta.
+		Princesa: Necesitarás responder correctamente para tomar el camino correcto para avanzar en tu misión.
+		=> END
+- No
+	Princesa: [[Que tengas un buen viaje|Hasta la próxima]].
+	=> END
+=> END
+
+
+~ main6
+
+Princesa: [[¡Saludos, caminante!|Saludos]]. ¿No sabes a dónde ir? ¿Estás listo para responder otra pregunta?
+- Si
+	Princesa: Perfecto. Aquí está tu pregunta: ¿Cuál es el nombre de una celebración tradicional ecuatoriana que tiene lugar en diciembre?
+	- Inti Raymi
+		Princesa: Respuesta incorrecta.
+		Princesa: Necesitarás responder correctamente para tomar el camino correcto para avanzar en tu misión.
+		=> END
+	- Carnaval
+		Princesa: Respuesta incorrecta.
+		Princesa: Necesitarás responder correctamente para tomar el camino correcto para avanzar en tu misión.
+		=> END
+	- Pase del Niño
+		Princesa: Respuesta correcta. ¡Muy bien! 
+		Princesa: El camino correcto es hacia abajo. ¡Buena suerte!
+		=> END
+- No
+	Princesa:  [[Adiós|Hasta pronto]].
+	=> END
+
+=> END
+
+
+~ main7
+
+Princesa: [[¡Hola de nuevo!|Hola]]. Te encuentras en una nueva bifurcación. ¿Estás listo para responder una pregunta?
+- Si
+	Princesa: Perfecto. Aquí está tu pregunta: ¿Cuál es la capital de la provincia de Loja en Ecuador?
+	- Quito
+		Princesa: Respuesta incorrecta.
+		Princesa: Necesitarás retroceder y tomar el camino correcto para avanzar en tu misión.
+		=> END
+	- Cuenca
+		Princesa: Respuesta correcta. ¡Muy bien!
+		Princesa: El camino correcto es hacia la derecha. ¡Buena suerte!
+		=> END
+	- Guayaquil
+		Princesa: Respuesta incorrecta.
+		Princesa: Necesitarás retroceder y tomar el camino correcto para avanzar en tu misión.
+		=> END
+- No
+	Princesa: [[Nos vemos|Hasta luego]]. 
+	=> END
+
+=> END
+
+
+~ main8
+
+
+=> END
+
+
+~ main9
+
+
+=> END
+
+
+~ main10
+
+
+=> END

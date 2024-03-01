@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4m7gcmkv75ib"]
+
+[ext_resource type="Script" path="res://scripts/black_layer.gd" id="1_4r0jr"]
+[ext_resource type="PackedScene" uid="uid://d3sev8b2gk34o" path="res://scenes/black_screen.tscn" id="1_ieh8c"]
+
+[node name="black_Layer" type="CanvasLayer"]
+script = ExtResource("1_4r0jr")
+
+[node name="black_screen" parent="." instance=ExtResource("1_ieh8c")]
+visible = false

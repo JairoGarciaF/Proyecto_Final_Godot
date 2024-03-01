@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkekgugvgorah"]
+
+[ext_resource type="Script" path="res://scripts/ui_layer.gd" id="1_inawf"]
+[ext_resource type="PackedScene" uid="uid://2ds5ft2s65ij" path="res://scenes/win_screen.tscn" id="1_xici1"]
+
+[node name="UILayer" type="CanvasLayer"]
+script = ExtResource("1_inawf")
+
+[node name="WinScreen" parent="." instance=ExtResource("1_xici1")]
+visible = false

@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://2ds5ft2s65ij"]
+
+[ext_resource type="Script" path="res://scripts/WinScreen.gd" id="1_vocpe"]
+[ext_resource type="FontFile" uid="uid://cb265e648wrov" path="res://fonts/Overlock-Bold.ttf" id="2_g8sv1"]
+[ext_resource type="StyleBox" uid="uid://b0fovm4vqcjqa" path="res://styles/buttonStyle.tres" id="3_53pfj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t86ud"]
+font = ExtResource("2_g8sv1")
+font_size = 55
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vocpe")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.454902)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = -13.0
+offset_right = 120.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Felicitaciones! Ganaste el juego"
+label_settings = SubResource("LabelSettings_t86ud")
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = 68.0
+offset_right = 49.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = ExtResource("3_53pfj")
+theme_override_styles/hover = ExtResource("3_53pfj")
+theme_override_styles/pressed = ExtResource("3_53pfj")
+text = "Salir"
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]

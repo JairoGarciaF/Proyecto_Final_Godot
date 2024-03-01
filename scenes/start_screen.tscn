@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk0swxbrssj5h"]
+
+[ext_resource type="Texture2D" uid="uid://dd7hagjav2ta0" path="res://assets/home.jpg" id="1_702v8"]
+[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_u0y80"]
+[ext_resource type="FontFile" uid="uid://cb265e648wrov" path="res://fonts/Overlock-Bold.ttf" id="2_jiay8"]
+[ext_resource type="StyleBox" uid="uid://b0fovm4vqcjqa" path="res://styles/buttonStyle.tres" id="3_nkx1v"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u0y80")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(480, 263)
+scale = Vector2(1.57123, 1.57123)
+texture = ExtResource("1_702v8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 73.0
+offset_right = 651.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.411765, 0.74902, 0.733333, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jiay8")
+theme_override_font_sizes/font_size = 100
+text = "Juego"
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 287.0
+offset_top = 28.0
+offset_right = 391.0
+offset_bottom = 118.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_nkx1v")
+theme_override_styles/hover = ExtResource("3_nkx1v")
+theme_override_styles/pressed = ExtResource("3_nkx1v")
+theme_override_styles/focus = ExtResource("3_nkx1v")
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -359.0
+offset_top = 26.0
+offset_right = -266.0
+offset_bottom = 116.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("3_nkx1v")
+theme_override_styles/hover = ExtResource("3_nkx1v")
+theme_override_styles/pressed = ExtResource("3_nkx1v")
+theme_override_styles/focus = ExtResource("3_nkx1v")
+text = "Quit"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

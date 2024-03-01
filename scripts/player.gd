@@ -31,6 +31,8 @@ var current_sign17 : Sign17 = null
 var current_sign18 : Sign18 = null
 var current_sign19 : Sign19 = null
 var current_sign20 : Sign20 = null
+var current_sign21 : Sign21 = null
+var current_sign22 : Sign22 = null
 
 var current_si
 
@@ -58,6 +60,14 @@ func _physics_process(_delta):
 		health = 0
 		print("player has been killed")
 		self.queue_free() # Destruye el objeto si la salud del jugador es menor a 0.
+
+
+var active = true
+
+func set_active(player_active: bool):
+	active = player_active
+	if not active:
+		velocity = Vector2.ZERO
 
 func show_dialog():
 	if Input.is_action_just_pressed("ui_accept"):
@@ -102,78 +112,86 @@ func show_dialog():
 			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/mundo1.dialogue"), "main4")
 		if current_sign20:
 			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/mundo1.dialogue"), "main5")
+		if current_sign21:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/mundo1.dialogue"), "main6")
+		if current_sign22:
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/mundo1.dialogue"), "main7")
 	return
 
 func player_movement():
-	# Maneja el movimiento del jugador según las teclas presionadas.
-	# También inicia la animación correspondiente y ajusta la velocidad.
-	if Input.is_action_pressed("move_right"):
-		current_dir = "right"
-		play_animation(1)
-		velocity.x = speed
-		velocity.y = 0
-	elif Input.is_action_pressed("move_left"):
-		current_dir = "left"
-		play_animation(1)
-		velocity.x = -speed
-		velocity.y = 0
-	elif Input.is_action_pressed("move_down"):
-		current_dir = "down"
-		play_animation(1)
-		velocity.x = 0
-		velocity.y = speed
-	elif Input.is_action_pressed("move_up"):
-		current_dir = "up"
-		play_animation(1)
-		velocity.x = 0
-		velocity.y = -speed
-		
-	# Si se presiona la tecla de ataque, llama a la función attack().
-	elif Input.is_action_just_pressed("attack"):
-		attack()
-	# Si no se presiona ninguna tecla de movimiento, detiene la animación y la velocidad.
-	else:
-		play_animation(0)
-		velocity.x = 0
-		velocity.y = 0
+	
+	if active == true:
+		# Maneja el movimiento del jugador según las teclas presionadas.
+		# También inicia la animación correspondiente y ajusta la velocidad.
+		if Input.is_action_pressed("move_right"):
+			current_dir = "right"
+			play_animation(1)
+			velocity.x = speed
+			velocity.y = 0
+		elif Input.is_action_pressed("move_left"):
+			current_dir = "left"
+			play_animation(1)
+			velocity.x = -speed
+			velocity.y = 0
+		elif Input.is_action_pressed("move_down"):
+			current_dir = "down"
+			play_animation(1)
+			velocity.x = 0
+			velocity.y = speed
+		elif Input.is_action_pressed("move_up"):
+			current_dir = "up"
+			play_animation(1)
+			velocity.x = 0
+			velocity.y = -speed
+			
+		# Si se presiona la tecla de ataque, llama a la función attack().
+		elif Input.is_action_just_pressed("attack"):
+			attack()
+		# Si no se presiona ninguna tecla de movimiento, detiene la animación y la velocidad.
+		else:
+			play_animation(0)
+			velocity.x = 0
+			velocity.y = 0
 	move_and_slide() # Utiliza la función de Godot para mover y deslizar el cuerpo.
 
 func play_animation(movement):
+	
+	if active == true:
 	# Maneja la reproducción de animaciones del jugador según la dirección y el tipo de movimiento.
 	# Además, verifica si el ataque está en progreso para decidir qué animación reproducir.
-	var dir = current_dir
-	
-	if dir == "right":
-		playerSprite.flip_h = false
-		if movement == 1:
-			playerSprite.play("walk")
-		elif movement == 0:
-			if attack_in_progress == false:
-				playerSprite.play("idle")
-	
-	if dir == "left":
-		playerSprite.flip_h = true
-		if movement == 1:
-			playerSprite.play("walk")
-		elif movement == 0:
-			if attack_in_progress == false:
-				playerSprite.play("idle")
-	
-	if dir == "down":
-		playerSprite.flip_h = true
-		if movement == 1:
-			playerSprite.play("front_walk")
-		elif movement == 0:
-			if attack_in_progress == false:
-				playerSprite.play("front_idle")
-	
-	if dir == "up":
-		playerSprite.flip_h = true
-		if movement == 1:
-			playerSprite.play("back_walk")
-		elif movement == 0:
-			if attack_in_progress == false:
-				playerSprite.play("back_idle")
+		var dir = current_dir
+		
+		if dir == "right":
+			playerSprite.flip_h = false
+			if movement == 1:
+				playerSprite.play("walk")
+			elif movement == 0:
+				if attack_in_progress == false:
+					playerSprite.play("idle")
+		
+		if dir == "left":
+			playerSprite.flip_h = true
+			if movement == 1:
+				playerSprite.play("walk")
+			elif movement == 0:
+				if attack_in_progress == false:
+					playerSprite.play("idle")
+		
+		if dir == "down":
+			playerSprite.flip_h = true
+			if movement == 1:
+				playerSprite.play("front_walk")
+			elif movement == 0:
+				if attack_in_progress == false:
+					playerSprite.play("front_idle")
+		
+		if dir == "up":
+			playerSprite.flip_h = true
+			if movement == 1:
+				playerSprite.play("back_walk")
+			elif movement == 0:
+				if attack_in_progress == false:
+					playerSprite.play("back_idle")
 
 func player():
 	pass
@@ -287,9 +305,15 @@ func _on_dialog_zone_body_entered(body):
 	elif body is Sign20:
 		current_sign20 = body
 		sign_in_range = true
-
+	elif body is Sign21:
+		current_sign21 = body
+		sign_in_range = true
+	elif body is Sign22:
+		current_sign22 = body
+		sign_in_range = true
 
 func _on_dialog_zone_body_exited(body):
 	if body is Sign or body is Sign2:
 		current_sign = null
 		sign_in_range = false
+
