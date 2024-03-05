@@ -5,9 +5,9 @@ extends Node2D
 
 @onready var player = $Player
 @onready var uilayer = $UILayer
-@onready var blackLayer = $black_Layer
 @onready var start_scenario = $Start
 @onready var exit_area = $Portal
+@onready var parallax = $MidParallax
 
 var winner = false
 
@@ -22,10 +22,10 @@ func _on_exit_body_entered(body):
 		if is_final_level || next_level == null:
 			uilayer.show_win_screen()
 		elif next_level != null:
-			blackLayer.show_black_screen()
-			await get_tree().create_timer(0.5).timeout
+			parallax.show()
+			await get_tree().create_timer(8).timeout
 			get_tree().change_scene_to_packed(next_level)
-			blackLayer.hide_black_screen()
+			parallax.hide()
 
 
 func _process(_delta):

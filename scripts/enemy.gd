@@ -52,7 +52,7 @@ func deal_with_damage():
 			health = health - 20  # Reduce la salud del enemigo en 50.
 			$take_damage_cooldown.start()  # Inicia el temporizador de recuperación después de recibir daño.
 			can_take_damage = false  # Desactiva la capacidad de recibir daño temporalmente.
-			print("monster equals = ", health)  # Imprime la salud actual del enemigo.
+#			print("monster equals = ", health)  # Imprime la salud actual del enemigo.
 			if health <= 0:
 				self.queue_free()  # Libera el objeto si la salud es igual o inferior a 0.
 

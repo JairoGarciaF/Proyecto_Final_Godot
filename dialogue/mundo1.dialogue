@@ -2,7 +2,7 @@
 
 Princesa: ¡Bienvenido a la aventura en el Bosque Encantado! Soy la princesa y necesito tu ayuda.
 - ¿Cómo juego?
-Princesa: Puedes moverte con las teclas AWSD y usar Enter para interactuar cuando te encuentres cerca de carteles. ¡Es crucial que vayas rápido para rescatarme del castillo!
+Princesa: Puedes moverte con las teclas AWSD y usar G para interactuar cuando te encuentres cerca de carteles. ¡Es crucial que vayas rápido para rescatarme del castillo!
 - ¿Por qué estás atrapada?
 Princesa: Estoy atrapada en un castillo lleno de monstruos malvados. Necesito ser rescatada lo antes posible. ¡Dependo de ti!
 - ¿Dónde está el castillo?
@@ -29,7 +29,7 @@ Princesa: [[¡Bienvenido de vuelta!|Bienvenido]]. Te encuentras en una bifurcaci
 		Princesa: El camino correcto es hacia la derecha. ¡Buena suerte!
 		=> END
 - No
-	Princesa: [[[Hasta la próxima misión|Adiós por ahora]].
+	Princesa: [[Hasta la próxima misión|Adiós por ahora]].
 	=> END
 => END
 
