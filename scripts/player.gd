@@ -36,7 +36,7 @@ var current_sign22 : Sign22 = null
 var sign_in_range = false
 var sign_in_progress = false
 
-const speed = 200
+const speed = 120 
 var current_dir = "none"
 @onready var playerSprite = $AnimatedSprite2D
 
@@ -55,7 +55,9 @@ func _physics_process(_delta):
 		player_alive = false
 		health = 0
 		print("player has been killed")
-		self.queue_free() # Destruye el objeto si la salud del jugador es menor a 0.
+#		self.queue_free() # Destruye el objeto si la salud del jugador es menor a 0.
+		reset_player()
+		
 
 var active = true
 
@@ -228,7 +230,7 @@ func enemy_attack():
 		health = health - 20
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
-#		print("player life ",health) # Imprime la salud actual del jugador.
+		print("player life ",health) # Imprime la salud actual del jugador.
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true # Activa el cooldown después de que el temporizador ha terminado.
@@ -331,3 +333,10 @@ func _on_dialog_zone_body_entered(body):
 
 func _on_dialog_zone_body_exited(_body):
 	sign_in_range = false
+
+func reset_player():
+	player_alive = true
+	health = 150
+	enemy_in_attack_range = false
+	attack_in_progress = false
+	get_tree().reload_current_scene()

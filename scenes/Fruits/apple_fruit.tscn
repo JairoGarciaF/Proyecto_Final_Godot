@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4bmwjmgruk5e"]
+
+[ext_resource type="Texture2D" uid="uid://bw0uc5aoqphm" path="res://assets/fruits/GreenApple.png" id="1_p6nu8"]
+[ext_resource type="Script" path="res://scripts/apple_fruit.gd" id="1_p8trx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8yghv"]
+radius = 3.16228
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gyt20"]
+radius = 5.0
+
+[node name="AppleFruit" type="CharacterBody2D"]
+collision_layer = 32
+script = ExtResource("1_p8trx")
+healtFruit = 60
+
+[node name="GreenApple" type="Sprite2D" parent="."]
+texture = ExtResource("1_p6nu8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_8yghv")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 2)
+shape = SubResource("CircleShape2D_gyt20")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

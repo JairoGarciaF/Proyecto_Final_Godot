@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjpvl427jq75g"]
+
+[ext_resource type="Texture2D" uid="uid://bvw2irt613o5r" path="res://assets/fruits/banana.png" id="1_da238"]
+[ext_resource type="Script" path="res://scripts/banana_fruit.gd" id="1_xlpmf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h2vg5"]
+radius = 2.0
+height = 11.1782
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y7w7r"]
+radius = 2.80574
+height = 14.3862
+
+[node name="BananaFruit" type="CharacterBody2D"]
+collision_layer = 32
+script = ExtResource("1_xlpmf")
+healtFruit = 60
+
+[node name="Banana" type="Sprite2D" parent="."]
+texture = ExtResource("1_da238")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+rotation = 0.630462
+shape = SubResource("CapsuleShape2D_h2vg5")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 9.53674e-07)
+rotation = 0.658656
+shape = SubResource("CapsuleShape2D_y7w7r")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

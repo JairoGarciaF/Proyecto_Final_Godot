@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddcm8akqrg7ly"]
+
+[ext_resource type="Texture2D" uid="uid://ci3ykd0cvm5rj" path="res://assets/fruits/orange.png" id="1_eltej"]
+[ext_resource type="Script" path="res://scripts/orange_fruit.gd" id="1_gr36k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l8ado"]
+radius = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vaepo"]
+radius = 5.0
+
+[node name="OrangeFruit" type="CharacterBody2D"]
+collision_layer = 32
+script = ExtResource("1_gr36k")
+healtFruit = 60
+
+[node name="Orange" type="Sprite2D" parent="."]
+texture = ExtResource("1_eltej")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_l8ado")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_vaepo")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

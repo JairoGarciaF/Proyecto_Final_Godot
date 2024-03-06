@@ -1,12 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://2ds5ft2s65ij"]
+[gd_scene load_steps=4 format=3 uid="uid://2ds5ft2s65ij"]
 
 [ext_resource type="Script" path="res://scripts/WinScreen.gd" id="1_vocpe"]
 [ext_resource type="FontFile" uid="uid://cb265e648wrov" path="res://fonts/Overlock-Bold.ttf" id="2_g8sv1"]
 [ext_resource type="StyleBox" uid="uid://b0fovm4vqcjqa" path="res://styles/buttonStyle.tres" id="3_53pfj"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_t86ud"]
-font = ExtResource("2_g8sv1")
-font_size = 55
 
 [node name="WinScreen" type="Control"]
 layout_mode = 3
@@ -24,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.454902)
+color = Color(0, 0, 0, 0.196078)
 
 [node name="Label" type="Label" parent="ColorRect"]
 layout_mode = 1
@@ -33,14 +29,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.5
-offset_top = -13.0
-offset_right = 120.5
-offset_bottom = 13.0
+offset_left = -393.0
+offset_top = -132.5
+offset_right = 393.0
+offset_bottom = -55.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_fonts/font = ExtResource("2_g8sv1")
+theme_override_font_sizes/font_size = 60
 text = "Felicitaciones! Ganaste el juego"
-label_settings = SubResource("LabelSettings_t86ud")
 
 [node name="Button" type="Button" parent="ColorRect"]
 layout_mode = 1
@@ -57,10 +58,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.239216, 0.364706, 0.45098, 1)
 theme_override_font_sizes/font_size = 39
 theme_override_styles/normal = ExtResource("3_53pfj")
 theme_override_styles/hover = ExtResource("3_53pfj")
 theme_override_styles/pressed = ExtResource("3_53pfj")
+theme_override_styles/focus = ExtResource("3_53pfj")
 text = "Salir"
 
 [connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]

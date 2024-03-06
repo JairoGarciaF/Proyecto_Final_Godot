@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7u2bx5wv8732"]
+
+[ext_resource type="Texture2D" uid="uid://m0bd68uaxqjg" path="res://assets/portal/portal.png" id="1_p0v7e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v56p"]
+atlas = ExtResource("1_p0v7e")
+region = Rect2(0, 0, 250, 592)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loslp"]
+atlas = ExtResource("1_p0v7e")
+region = Rect2(250, 0, 250, 592)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yacpg"]
+atlas = ExtResource("1_p0v7e")
+region = Rect2(500, 0, 250, 592)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5er0v"]
+atlas = ExtResource("1_p0v7e")
+region = Rect2(750, 0, 250, 592)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hrpdf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v56p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loslp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yacpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5er0v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7cp7h"]
+radius = 32.0
+height = 198.0
+
+[node name="PortalAnimado" type="CharacterBody2D"]
+collision_layer = 64
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.488, 0.488)
+sprite_frames = SubResource("SpriteFrames_hrpdf")
+animation = &"idle"
+autoplay = "idle"
+frame = 3
+frame_progress = 0.413281
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -21)
+shape = SubResource("CapsuleShape2D_7cp7h")

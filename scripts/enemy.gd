@@ -1,6 +1,6 @@
 extends CharacterBody2D  # Extiende la clase CharacterBody2D, indicando que este script controla un objeto con cuerpo 2D.
 
-var speed = 150  # Velocidad a la que el enemigo se moverá.
+var speed = 90  # Velocidad a la que el enemigo se moverá.
 var player_chase = false  # Indica si el enemigo está persiguiendo al jugador.
 var player = null  # Referencia al jugador.
 
@@ -68,5 +68,3 @@ func update_health():
 		healthBar.visible = false
 	else:
 		healthBar.visible = true
-	
-	

@@ -12,6 +12,7 @@ extends Node2D
 var winner = false
 
 func _ready():
+	#el jugador inicia en start
 	player.global_position = start_scenario.get_spawn_possition()
 	exit_area.body_entered.connect(_on_exit_body_entered)
 
@@ -26,7 +27,6 @@ func _on_exit_body_entered(body):
 			await get_tree().create_timer(8).timeout
 			get_tree().change_scene_to_packed(next_level)
 			parallax.hide()
-
 
 func _process(_delta):
 	if Input.is_action_just_pressed("quit"):
