@@ -62,7 +62,7 @@ func _on_take_damage_cooldown_timeout():
 
 func update_health():
 	
-	var healthBar = $healthBar
+	var healthBar = $ProgressBar
 	healthBar.value = health
 	
 	if health >= 100:
