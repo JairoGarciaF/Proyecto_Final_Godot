@@ -63,7 +63,10 @@ position = Vector2(1948, 2595)
 position = Vector2(-868, -126)
 
 [node name="Enemy7" parent="Enemies" instance=ExtResource("4_d8xuo")]
-position = Vector2(3734, 695)
+position = Vector2(3801, 662)
+scale = Vector2(2.19781, 2.19781)
+speed = 100
+health = 200
 
 [node name="Enemy8" parent="Enemies" instance=ExtResource("4_d8xuo")]
 position = Vector2(4286, 2073)
@@ -139,7 +142,7 @@ position = Vector2(-1773, 2550)
 [node name="UILayer" parent="." instance=ExtResource("21_dqg1x")]
 
 [node name="Start" parent="." instance=ExtResource("21_0v0yw")]
-position = Vector2(-1889, 2614)
+position = Vector2(4263, 1651)
 
 [node name="Portal" parent="." instance=ExtResource("23_d4ksb")]
 position = Vector2(3964, -189)
@@ -176,6 +179,24 @@ position = Vector2(-1301, -334)
 
 [node name="BananaFruit4" parent="Fruits/Bananas" instance=ExtResource("25_35x4v")]
 position = Vector2(3892, 673)
+
+[node name="BananaFruit7" parent="Fruits/Bananas" instance=ExtResource("25_35x4v")]
+position = Vector2(3879, 738)
+
+[node name="BananaFruit8" parent="Fruits/Bananas" instance=ExtResource("25_35x4v")]
+position = Vector2(3734, 587)
+
+[node name="BananaFruit9" parent="Fruits/Bananas" instance=ExtResource("25_35x4v")]
+position = Vector2(3642, 652)
+
+[node name="BananaFruit10" parent="Fruits/Bananas" instance=ExtResource("25_35x4v")]
+position = Vector2(3899, 577)
+
+[node name="BananaFruit12" parent="Fruits/Bananas" instance=ExtResource("25_35x4v")]
+position = Vector2(4095, 493)
+
+[node name="BananaFruit11" parent="Fruits/Bananas" instance=ExtResource("25_35x4v")]
+position = Vector2(3715, 795)
 
 [node name="BananaFruit5" parent="Fruits/Bananas" instance=ExtResource("25_35x4v")]
 position = Vector2(-715, -162)

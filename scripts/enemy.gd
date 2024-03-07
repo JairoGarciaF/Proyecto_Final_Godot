@@ -1,10 +1,10 @@
 extends CharacterBody2D  # Extiende la clase CharacterBody2D, indicando que este script controla un objeto con cuerpo 2D.
 
-var speed = 90  # Velocidad a la que el enemigo se moverá.
+@export var speed = 80  # Velocidad a la que el enemigo se moverá.
 var player_chase = false  # Indica si el enemigo está persiguiendo al jugador.
 var player = null  # Referencia al jugador.
 
-var health = 100  # Salud del enemigo.
+@export var health = 100  # Salud del enemigo.
 var player_in_attack_zone = false  # Indica si el jugador está dentro del rango de ataque.
 var can_take_damage = true  # Indica si el enemigo puede recibir daño.
 
@@ -49,7 +49,7 @@ func _on_hit_zone_body_exited(body):
 func deal_with_damage():	
 	if player_in_attack_zone and global.player_current_attack == true:
 		if can_take_damage == true:
-			health = health - 20  # Reduce la salud del enemigo en 50.
+			health = health - 20  # Reduce la salud del enemigo en 20.
 			$take_damage_cooldown.start()  # Inicia el temporizador de recuperación después de recibir daño.
 			can_take_damage = false  # Desactiva la capacidad de recibir daño temporalmente.
 #			print("monster equals = ", health)  # Imprime la salud actual del enemigo.
@@ -59,12 +59,13 @@ func deal_with_damage():
 func _on_take_damage_cooldown_timeout():
 	can_take_damage = true  # Activa la capacidad de recibir daño después de que el temporizador de recuperación ha terminado.
 
+
 func update_health():
-	var healthBar = $healthBar
 	
+	var healthBar = $healthBar
 	healthBar.value = health
 	
-	if health >= 100:
+	if health >= 200:
 		healthBar.visible = false
 	else:
 		healthBar.visible = true

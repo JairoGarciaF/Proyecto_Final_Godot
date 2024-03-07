@@ -36,7 +36,7 @@ var current_sign22 : Sign22 = null
 var sign_in_range = false
 var sign_in_progress = false
 
-const speed = 120 
+@export var speed = 120
 var current_dir = "none"
 @onready var playerSprite = $AnimatedSprite2D
 

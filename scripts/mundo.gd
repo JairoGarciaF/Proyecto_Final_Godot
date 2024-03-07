@@ -15,6 +15,7 @@ func _ready():
 	#el jugador inicia en start
 	player.global_position = start_scenario.get_spawn_possition()
 	exit_area.body_entered.connect(_on_exit_body_entered)
+	AudioPlayer.play_sfx("mundo1")
 
 func _on_exit_body_entered(body):
 	if body is Player:
