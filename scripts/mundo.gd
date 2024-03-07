@@ -15,7 +15,6 @@ func _ready():
 	#el jugador inicia en start
 	player.global_position = start_scenario.get_spawn_possition()
 	exit_area.body_entered.connect(_on_exit_body_entered)
-	AudioPlayer.play_sfx("mundo1")
 
 func _on_exit_body_entered(body):
 	if body is Player:
@@ -25,7 +24,7 @@ func _on_exit_body_entered(body):
 			uilayer.show_win_screen()
 		elif next_level != null:
 			parallax.show()
-			await get_tree().create_timer(8).timeout
+			await get_tree().create_timer(4).timeout
 			get_tree().change_scene_to_packed(next_level)
 			parallax.hide()
 
