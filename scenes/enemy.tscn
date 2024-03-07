@@ -207,14 +207,13 @@ shape = SubResource("CircleShape2D_qamiq")
 [node name="take_damage_cooldown" type="Timer" parent="."]
 wait_time = 0.5
 
-[node name="healthBar" type="ProgressBar" parent="."]
+[node name="ProgressBar" type="ProgressBar" parent="."]
 modulate = Color(0, 0.6, 0, 1)
 offset_left = -15.0
 offset_top = 34.0
 offset_right = 75.0
 offset_bottom = 61.0
 scale = Vector2(0.3, 0.3)
-max_value = 200.0
 value = 100.0
 show_percentage = false
 
